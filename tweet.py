@@ -16,7 +16,7 @@ root = pathlib.Path(__file__).parent
 with open(root / "quotes.csv", newline="", encoding="utf-8") as f:
     quotes = [row[0] for row in csv.reader(f) if row]
 
-start = datetime.date(2025, 1, 1)
+start = datetime.date(2025, 6, 25)
 idx = (datetime.date.today() - start).days % len(quotes)
 quote = quotes[idx]
 
