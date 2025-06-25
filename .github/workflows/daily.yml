@@ -2,8 +2,11 @@ name: Daily Quote Bot
 
 on:
   schedule:
-    - cron: '0 9 * * *'      # 09:00 UTC daily
-  workflow_dispatch:          # manual trigger
+    - cron: '0 9 * * *'     # 09:00 UTC daily
+  workflow_dispatch:         # manual trigger
+
+permissions:
+  contents: read
 
 jobs:
   tweet:
