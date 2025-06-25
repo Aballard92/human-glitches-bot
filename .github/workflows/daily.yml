@@ -1,3 +1,4 @@
+# Trigger bump to reparse cron
 name: Daily Quote Bot
 on:
   schedule:
