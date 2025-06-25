@@ -1,16 +1,17 @@
-# Trigger bump to reparse cron
 name: Daily Quote Bot
+
 on:
   schedule:
-    - cron: '0 9 * * *'   # 09:00 UTC every day
-  workflow_dispatch:      # lets you run it manually
+    - cron: '0 9 * * *'   # 09:00 UTC daily
+  workflow_dispatch:
+
 jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - name: Install dependencies
+      - name: Install tweepy
         run: pip install tweepy
       - name: Run tweet script
         env:
@@ -20,4 +21,3 @@ jobs:
           ACCESS_SECRET:  ${{ secrets.ACCESS_SECRET }}
           BEARER_TOKEN:   ${{ secrets.BEARER_TOKEN }}
         run: python tweet.py
-
