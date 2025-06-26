@@ -2,7 +2,7 @@ name: Daily Tweet Bot
 
 on:
   schedule:
-    - cron: '0 9 * * *'     # 09:00 UTC daily
+    - cron: '45 9 * * *'
   workflow_dispatch:
 
 permissions:
