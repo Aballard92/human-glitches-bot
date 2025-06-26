@@ -21,7 +21,7 @@ client = tweepy.Client(
 
 # ── 2. CONFIG ─────────────────────────────────────────────────────────────────
 CSV_PATH   = "quotes.csv"      # 730-row data file (see Section 2)
-START_DATE = datetime.date(2025, 6, 25)     # day 1 of the bot
+START_DATE = datetime.date(2025, 6, 27)     # day 1 of the bot
 HASHTAGS   = ["#HumanNature", "#CognitiveBias", "#BrainFacts",
               "#MindHacks", "#Psychology"]
 
